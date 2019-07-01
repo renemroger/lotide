@@ -1,8 +1,5 @@
-const { eqArrays } = require('../eqArrays');
 const { middle } = require('../middle');
 const assert = require('chai').assert;
-
-
 
 describe("#middle", () => {
   it("middle [1,2,3,4] should be [2,3]", () => {
