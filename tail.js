@@ -8,14 +8,6 @@ const assertEqual = function (actual, expected) {
     console.log(`👎 👎 👎 Assertion Failed: ${actual}  ===  ${expected}`);
   }
 };
-
-const head = function (arr) {
-  if (arr.length >= 1)
-    return arr[0];
-  else
-    return undefined;
-};
-
 const tail = function (arr) {
   if (arr.length === 0) {
     return [];
@@ -26,4 +18,4 @@ const tail = function (arr) {
   }
 };
 
-module.exports = { words, head, tail };
+module.exports = { tail };

@@ -1,4 +1,3 @@
-
 const eqArrays = function (arr, arr02) {
   let same = true;
   if (arr.length === arr02.length) {
@@ -22,3 +21,5 @@ const assertEqualTwo = function (func, args, expected) {
 };
 
 module.exports = { eqArrays };
+
+//assertEqual(1, 1);
