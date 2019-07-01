@@ -1,14 +1,6 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  console.log(assertEqual.caller);
-  if (actual === expected) {
-    console.log(`✅✅✅  Assertion Passed:  ${actual}  ===  ${expected} Called by`);
-  } else {
-    console.log(`🛑🛑🛑  Assertion Failed: ${actual}  ===  ${expected}`);
-  }
-};
+const { assertEqual } = require('./assertEqual');
 
-const eqArrays = function(arr, arr02) {
+const eqArrays = function (arr, arr02) {
   let same = true;
   if (arr.length === arr02.length) {
     for (let i = 0; i < arr.length; i++) {
@@ -24,7 +16,7 @@ const eqArrays = function(arr, arr02) {
 };
 
 // FUNCTION IMPLEMENTATION
-const assertEqualTwo = function(func, args, expected) {
+const assertEqualTwo = function (func, args, expected) {
   const actual = func(...args);// [1,2,3], [1,2,3]] => [1,2,3] , [1,2,3]
   console.log((actual === expected) ? `✅✅✅  Assertion Passed:  ${actual}  ===  ${expected} --- Asserting : ${func.name}` :
     `🛑🛑🛑  Assertion Failed: ${actual}`);
@@ -32,7 +24,8 @@ const assertEqualTwo = function(func, args, expected) {
 
 
 assertEqualTwo(eqArrays, [[1, 2, 3], [1, 2, 3]], true);
-
-// TEST CODE
 assertEqual("Lighthouse Labs", "Bootcamp");
+
+module.exports = { eqArrays };
+
 //assertEqual(1, 1);

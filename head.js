@@ -5,4 +5,4 @@ const head = function (arr) {
     return undefined;
 }
 
-module.exports = head;
+module.exports = { head };
