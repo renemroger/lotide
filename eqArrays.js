@@ -1,4 +1,3 @@
-const { assertEqual } = require('./assertEqual');
 
 const eqArrays = function (arr, arr02) {
   let same = true;
@@ -22,10 +21,4 @@ const assertEqualTwo = function (func, args, expected) {
     `🛑🛑🛑  Assertion Failed: ${actual}`);
 };
 
-
-assertEqualTwo(eqArrays, [[1, 2, 3], [1, 2, 3]], true);
-assertEqual("Lighthouse Labs", "Bootcamp");
-
 module.exports = { eqArrays };
-
-//assertEqual(1, 1);
