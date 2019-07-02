@@ -1,13 +1,7 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅  Assertion Passed:  ${actual}  ===  ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑  Assertion Failed: ${actual}  ===  ${expected}`);
-  }
-};
 
-const findKeyByValue = function(showByGenre, value) {
+const { assertEqual } = require('./assertEqual');
+
+const findKeyByValue = function (showByGenre, value) {
   for (const item in showByGenre) {
     if (showByGenre[item] === value) {
       return item;

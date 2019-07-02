@@ -1,17 +1,4 @@
-const eqArrays = function (arr, arr02) {
-  let same = true;
-  if (arr.length === arr02.length) {
-    for (let i = 0; i < arr.length; i++) {
-      same = arr[i] === arr02[i] ? true : false;
-      if (!same) {
-        return false;
-      }
-    }
-    return true;
-  }
-  return false;
-
-};
+const { eqArrays } = require('./eqArrays');
 
 // FUNCTION IMPLEMENTATION
 const assertEqualTwo = function (func, args, expected) {

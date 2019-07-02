@@ -1,4 +1,6 @@
-const letterPositions = function(sentence) {
+const { eqArrays } = require('./eqArrays');
+
+const letterPositions = function (sentence) {
   const results = [];
   let counter = 0;
   for (const l of sentence) {
@@ -12,22 +14,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-const eqArrays = function(arr, arr02) {
-  let same = true;
-  if (arr.length === arr02.length) {
-    for (let i = 0; i < arr.length; i++) {
-      same = arr[i] === arr02[i] ? true : false;
-      if (!same) {
-        return false;
-      }
-    }
-    return true;
-  }
-  return false;
-};
-
 // FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function (arr1, arr2) {
   console.log((eqArrays(arr1, arr2)) ? `✅✅✅  Assertion Passed:  ${arr1}  ===  ${arr2} ` :
     `🛑🛑🛑  Assertion Failed: ${arr1} !== ${arr2}`);
 };
